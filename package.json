@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node scripts/build.mjs dev",
     "build": "node scripts/build.mjs",
+    "vercel-build": "node scripts/check.mjs",
     "check:rust": "node scripts/build.mjs check",
     "test": "node scripts/build.mjs test",
     "start": "node scripts/serve.mjs",

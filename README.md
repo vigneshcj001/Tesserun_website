@@ -69,7 +69,9 @@ node scripts/build.mjs test    # Native unit tests
 
 ## Deploy to Vercel
 
-Import **vigneshcj001/Tesserun_website**, choose framework **Other**, leave build and install commands empty, and set output directory to **dist**. `vercel.json` declares these settings. No environment variables or Rust server are needed on Vercel.
+Import **vigneshcj001/Tesserun_website**, choose framework **Other**, and set output directory to **dist**. The repository configuration runs `node scripts/check.mjs` as the build command and skips dependency installation. No environment variables, Rust compiler, Trunk installation, or Rust server are needed on Vercel.
+
+`buildCommand: null` allows command auto-detection; it does not disable builds. The explicit verification command prevents Vercel from selecting the local `npm run build` Rust compilation script. An empty `installCommand` skips npm installation. A `vercel-build` package script provides the same verification command if Vercel falls back to package-script detection.
 
 The repository includes a release bundle so Vercel can serve it directly. After changing Rust, HTML, or CSS, rebuild and verify locally, then commit both the source and updated `dist/`. Vercel does not compile Rust automatically with this configuration.
 
