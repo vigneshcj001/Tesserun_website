@@ -4,7 +4,7 @@ import { resolve, relative } from 'node:path';
 import { root } from './rust-tools.mjs';
 
 export async function sourceHash() {
-  const files = ['Cargo.toml', 'Cargo.lock', 'Trunk.toml', 'index.html', 'styles.css'];
+  const files = ['Cargo.toml', 'Cargo.lock', 'Trunk.toml', 'index.html', 'styles.css', 'experience.css'];
   async function collect(directory) {
     for (const entry of await readdir(directory, { withFileTypes: true })) {
       const path = resolve(directory, entry.name);

@@ -1,4 +1,7 @@
+mod download;
 mod navigation;
+mod palette;
+mod providers;
 mod tour;
 
 use leptos::prelude::*;
@@ -9,7 +12,7 @@ fn main() {
     let document = document();
 
     // Static content remains usable before WASM loads, or when it is disabled.
-    // Only the two interactive regions are replaced with reactive components.
+    // The interactive regions are enhanced without delaying the static page.
     if let Some(element) = document.get_element_by_id("navigation-root") {
         element.set_text_content(None);
         leptos::mount::mount_to(element.unchecked_into(), navigation::Navigation).forget();
@@ -17,5 +20,13 @@ fn main() {
     if let Some(element) = document.get_element_by_id("workspace-tour") {
         element.set_text_content(None);
         leptos::mount::mount_to(element.unchecked_into(), tour::WorkspaceTour).forget();
+    }
+    if let Some(element) = document.get_element_by_id("models") {
+        element.set_text_content(None);
+        leptos::mount::mount_to(element.unchecked_into(), providers::ProviderExplorer).forget();
+    }
+    if let Some(element) = document.get_element_by_id("download-interaction") {
+        element.set_text_content(None);
+        leptos::mount::mount_to(element.unchecked_into(), download::DownloadCard).forget();
     }
 }

@@ -4,16 +4,28 @@ The download website for the Tesserun native Windows application. Its interactiv
 
 Page content, FAQs, and downloads arrive as static HTML. Rust components enhance navigation and the workspace tour after WebAssembly loads. No production Node server, database, or model API connection is required.
 
+## Explore the website
+
+- Pick a starter in the interactive studio, edit its brief, and preview example Planner, Developer, and Reviewer perspectives. Examples follow the selected starter; the website does not interpret prompts with AI.
+- Open the example source, inspect the three review layers, and compare local export with Vercel publishing.
+- Explore the supported providers without connecting an account.
+- Use **Ctrl/Cmd + K** or the navigation search button to jump to a section. The native dialog supports Escape, focus trapping, and keyboard navigation.
+- Open the download setup guide, or request the real Windows download to reveal the first three setup steps. The site does not claim that a download has completed.
+
 ## Stack and modules
 
 | Path | Responsibility |
 | --- | --- |
 | `index.html` | Static content, metadata, download links, and loading fallbacks |
 | `styles.css` | Responsive design, typography, and reduced-motion support |
+| `experience.css` | Studio, provider explorer, command palette, and setup interactions |
 | `src/main.rs` | Mount the Leptos client components |
 | `src/navigation.rs` | Reactive mobile navigation and Escape handling |
+| `src/palette.rs` | Searchable section navigation with native dialog behavior |
+| `src/providers.rs` | Keyboard-accessible provider explorer |
+| `src/download.rs` | Real download link and expandable setup guide |
 | `src/tour.rs` | Workspace preview, tabs, and keyboard focus |
-| `src/tour/content.rs` | Illustrative development, review, and deployment views |
+| `src/tour/` | Editable brief, starter examples, agent roles, review layers, and publishing choices |
 | `src/tour/step.rs` | Typed tour states and keyboard transitions |
 | `public/` | Branding, Windows download, and SHA-256 checksum |
 | `dist/` | Release output for static hosting |
