@@ -1,10 +1,13 @@
 {
   "name": "tesserun-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs dev",
+    "build": "node scripts/build.mjs",
+    "check:rust": "node scripts/build.mjs check",
+    "test": "node scripts/build.mjs test",
     "start": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs"
   }

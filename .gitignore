@@ -3,3 +3,7 @@ node_modules/
 .env
 .env.*
 *.log
+.tools/
+target/
+.trunk-lock
+/dist/.stage/

@@ -6,7 +6,7 @@ import { resolve, extname, sep } from 'node:path';
 
 const root = fileURLToPath(new URL('../dist/', import.meta.url));
 const port = Number(process.env.PORT || 4173);
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8', '.exe': 'application/octet-stream' };
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.wasm': 'application/wasm', '.svg': 'image/svg+xml', '.txt': 'text/plain; charset=utf-8', '.exe': 'application/octet-stream' };
 createServer(async (req, res) => {
   try {
     if (!['GET', 'HEAD'].includes(req.method)) { res.writeHead(405); return res.end(); }

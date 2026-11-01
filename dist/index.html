@@ -10,17 +10,31 @@
   <meta property="og:type" content="website">
   <title>Tesserun — Your next idea starts here.</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-</head>
+  <link rel="stylesheet" href="/styles-1e30924c4ad734dd.css" integrity="sha384-K6PMj+MxF8EnjRyua6fmjiLmJIg+tHaxVOGjLaqIG5dRPVg8d6LdxRRn6NkVA76L"/>
+
+<script type="module">
+import init, * as bindings from '/tesserun-website-4ac3f60a7a16c252.js';
+const wasm = await init({ module_or_path: '/tesserun-website-c099190f30dc8d6e_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+
+
+<link rel="modulepreload" href="/tesserun-website-4ac3f60a7a16c252.js" crossorigin="anonymous" integrity="sha384-XHnt59OnGSP8R9p43tImpLO1U3RQMh+eweJzd6GlBbD6hz07z/9ZLmDHzf4CMlwP"><link rel="preload" href="/tesserun-website-c099190f30dc8d6e_bg.wasm" crossorigin="anonymous" integrity="sha384-141Tj9akgQTMKvDu9APWvLSOZhYr9cj8anCQDqNpfr2zyOPgXOy+DLuHhcDjFS9q" as="fetch" type="application/wasm"></head>
 <body>
+  <noscript><style>@media(max-width:640px){.menu-toggle{display:none}.header{height:auto;min-height:78px;flex-wrap:wrap;padding-bottom:16px}.header nav{position:static;display:flex;flex-direction:row;flex-wrap:wrap;font-size:11px;border:0;padding:0;box-shadow:none;width:100%}}</style></noscript>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header">
     <a class="brand" href="#" aria-label="Tesserun home"><img src="assets/mark.svg" alt="" width="32" height="32">tesserun<span class="brand-dot">.</span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
+    <div id="navigation-root"><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="#workspace">Workspace</a><a href="#workflow">How it works</a><a href="#questions">FAQs</a><a href="https://github.com/vigneshcj001/Tesserun" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    </nav>
+    </nav></div>
     <a class="button button-small header-download" href="#download">Get Tesserun <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main">
@@ -41,7 +55,7 @@
     </section>
     <section class="showcase wrap" id="workspace" aria-labelledby="workspace-title">
       <div class="section-caption"><span><span class="tiny-cross">+</span> YOUR NEW PLACE TO MAKE THINGS</span><span>NATIVE RUST WORKSPACE <span aria-hidden="true">↙</span></span></div>
-      <div class="preview-stage">
+      <div id="workspace-tour"><div class="preview-stage">
         <div class="stage-grid" aria-hidden="true"></div>
         <div class="app-window">
           <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Tesserun <span class="window-bar-muted">/ a space for your next idea</span></span><span class="window-version">v0.3.0</span></div>
@@ -49,14 +63,14 @@
             <aside class="app-sidebar" aria-hidden="true"><div class="preview-brand"><img src="assets/mark.svg" alt="" width="23" height="23">tesserun.</div><div class="preview-new">+ <span>New project</span></div><span class="sidebar-label">WORKSPACE</span><span class="side-item active" data-side="develop">⌘ <span>Development</span></span><span class="side-item" data-side="check">◉ <span>Quality checks</span></span><span class="side-item" data-side="deploy">↗ <span>Deployments</span></span><span class="side-item">◌ <span>AI chat</span></span><div class="sidebar-bottom"><span class="status-dot"></span> Native. Local. Yours.</div></aside>
             <div class="app-content" id="tour-panel" role="tabpanel" aria-labelledby="tab-develop" tabindex="0">
               <div class="app-breadcrumb">Workspace <span>/</span> <strong id="tour-breadcrumb">Development</strong><span class="local-badge"><span class="status-dot"></span> Local workspace</span></div>
-              <div class="tour-body" id="tour-content"></div>
+              <div class="tour-body" id="tour-content"><div class="tour-kicker">YOUR NATIVE WORKSPACE</div><h3>What will you create?</h3><p class="tour-description">Plan, develop, and review your next idea.</p><div class="brief-box"><p>Describe your application, choose your model, and start building.</p></div><p class="preview-footnote">Interactive tour loads with WebAssembly. Downloads work without it.</p></div>
             </div>
           </div>
         </div>
         <span class="stage-label">LESS FRICTION. MORE FLOW.</span>
       </div>
-      <div class="tour-controls"><div class="tabs" role="tablist" aria-label="Explore the workspace"><button id="tab-develop" role="tab" aria-selected="true" aria-controls="tour-panel" data-tour="develop">01 <span>Develop</span></button><button id="tab-check" role="tab" aria-selected="false" aria-controls="tour-panel" tabindex="-1" data-tour="check">02 <span>Review</span></button><button id="tab-deploy" role="tab" aria-selected="false" aria-controls="tour-panel" tabindex="-1" data-tour="deploy">03 <span>Ship</span></button></div><p>Interactive product tour <span>·</span> Illustrative content</p></div>
-      <div class="workspace-intro"><h2 id="workspace-title">Your ideas, with<br>a little more <span class="serif">momentum.</span></h2><p>A clear brief. A considered plan. Source you can make your own. Tesserun brings the next step into focus, so you can keep moving.</p></div>
+      <div class="tour-controls"><div class="tabs" role="tablist" aria-label="Explore the workspace"><button id="tab-develop" role="tab" aria-selected="true" aria-controls="tour-panel" disabled data-tour="develop">01 <span>Develop</span></button><button id="tab-check" role="tab" aria-selected="false" aria-controls="tour-panel" tabindex="-1" disabled data-tour="check">02 <span>Review</span></button><button id="tab-deploy" role="tab" aria-selected="false" aria-controls="tour-panel" tabindex="-1" disabled data-tour="deploy">03 <span>Ship</span></button></div><p>Interactive product tour <span>·</span> Illustrative content</p></div>
+      </div><div class="workspace-intro"><h2 id="workspace-title">Your ideas, with<br>a little more <span class="serif">momentum.</span></h2><p>A clear brief. A considered plan. Source you can make your own. Tesserun brings the next step into focus, so you can keep moving.</p></div>
     </section>
     <section class="provider-strip wrap" aria-label="Supported model providers"><p>YOUR WORKSPACE.<br><strong>YOUR CHOICE OF MODEL.</strong></p><div><span>◉ OpenAI</span><span class="provider-anthropic">Anthropic</span><span>✦ Gemini</span><span class="provider-groq">groq</span><span>♧ Ollama</span></div></section>
     <section class="workflow wrap" id="workflow" aria-labelledby="workflow-title">
@@ -69,4 +83,3 @@
   <footer class="wrap"><div class="footer-top"><a class="brand" href="#"><img src="assets/mark.svg" alt="" width="30" height="30">tesserun.</a><p>Make room for your next idea.</p><div><a href="https://github.com/vigneshcj001/Tesserun" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#download">Download ↓</a></div></div><div class="footer-bottom"><span>© 2026 Tesserun</span><span>Built in Rust. Made for possibility.</span><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
-
