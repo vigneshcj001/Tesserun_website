@@ -10,3 +10,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
 #navigation-root,.navigation-region,#workspace-tour{display:contents}
+@media(min-width:641px) and (max-width:850px){.hero-art{overflow:clip}}
