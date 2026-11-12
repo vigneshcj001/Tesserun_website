@@ -180,3 +180,24 @@
 .provider-tabs button{font-size:14px}
 @media(max-width:850px){.provider-tabs button{font-size:12px}}
 @media(max-width:640px){.scenario-picker button{font-size:10px;padding-inline:5px}.provider-tabs button{flex-basis:40%;font-size:13px}.agent-switcher button{font-size:11px}.interactive-brief textarea{font-size:13px}.publish-switch button{font-size:11px}.source-example{font-size:10px}}
+
+/* Supporting instructions and download information must stay readable too. */
+.brief-bottom>span,.download-meta,.download-note,.preview-footnote,
+.provider-strip .provider-fine-print,.download-card-top small{font-size:11px;line-height:1.8;color:#6f6273}
+.tour-kicker{font-size:10px;letter-spacing:.8px;color:#78583f}
+.demo-toolbar strong,.demo-result-label,.provider-connection-label{font-size:10px;letter-spacing:.7px}
+.download-meta{align-items:center;flex-wrap:wrap;row-gap:4px}
+.download-meta>a{display:inline-flex;align-items:center;min-height:32px;padding:6px 0}
+.download-card .release-notice{font-size:11px;line-height:1.8;color:#716279}
+.setup-guide p,.command-result small,.download-requested{font-size:12px;line-height:1.8}
+.setup-guide strong{font-size:12px}
+.provider-description p{font-size:13px}
+.hero-actions .text-link{font-size:12px;min-height:36px}
+.footer-top>div>a{display:inline-flex;align-items:center;min-height:32px;font-size:12px}
+@media(max-width:640px){
+  .release-pill{font-size:10px!important;letter-spacing:0}
+  .demo-toolbar strong{font-size:9px}
+  .hero-actions .text-link,.download-meta>a,.release-link,.footer-top>div>a{min-height:44px}
+  .release-link{align-items:center;font-size:11px}
+  .footer-bottom>a{display:inline-flex;align-items:center;min-height:40px}
+}

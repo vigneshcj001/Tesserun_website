@@ -34,7 +34,7 @@ pub fn CommandPalette(on_navigate: Callback<()>) -> impl IntoView {
     on_cleanup(move || listener.remove());
     let matches = move || matching(&query.get());
     view! {
-        <button class="command-trigger" aria-label="Search website — Control or Command K" title="Jump to a section (Ctrl/Cmd + K)" on:click=move |_| open()><span aria-hidden="true">"⌕"</span><span class="command-trigger-label">"Quick jump"</span><kbd>"K"</kbd></button>
+        <button class="command-trigger" aria-label="Search website — Control or Command K" title="Jump to a section (Ctrl/Cmd + K)" on:click=move |_| open()><span aria-hidden="true">"⌕"</span><span class="command-trigger-label">"Quick jump"</span><kbd>"Ctrl K"</kbd></button>
         <Portal><dialog class="command-dialog" node_ref=dialog aria-label="Navigate Tesserun"
             on:close=move |_| query.set(String::new())
             on:click=move |event| {
