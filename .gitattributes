@@ -1,0 +1,7 @@
+# Keep committed bytes identical to the files Trunk hashes for Subresource
+# Integrity; CRLF conversion on commit breaks the integrity check in browsers.
+* text=auto eol=lf
+*.exe binary
+*.wasm binary
+*.jpg binary
+*.png binary
