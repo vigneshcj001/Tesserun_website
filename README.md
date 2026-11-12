@@ -38,7 +38,7 @@ Leptos and resolved dependencies are pinned in `Cargo.toml` and `Cargo.lock`. Tr
 Install Node.js, then run:
 
 ```powershell
-cd D:\APp\Tesserun-website
+cd D:\Tesserun-Workspace\Tesserun-website
 node scripts/serve.mjs
 ```
 
@@ -76,6 +76,8 @@ Import **vigneshcj001/Tesserun_website**, choose framework **Other**, and set ou
 The repository includes a release bundle so Vercel can serve it directly. After changing Rust, HTML, or CSS, rebuild and verify locally, then commit both the source and updated `dist/`. Vercel does not compile Rust automatically with this configuration.
 
 `dist/` is generated output, not a second source implementation. Do not edit it directly. Trunk replaces it on each build.
+
+Trunk adds Subresource Integrity hashes to `dist/index.html`, so committed files must be byte-identical to the built ones. `.gitattributes` keeps text files at LF line endings for this reason. If Git converts line endings in a built CSS or JavaScript file, browsers reject it and the live site appears unstyled. Keep source files at LF line endings before building.
 
 ## Windows download
 
